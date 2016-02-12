@@ -8,8 +8,21 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ScrollView;
+import android.widget.TextView;
+
 
 public class MainActivity extends AppCompatActivity {
+
+    synchronized void imprimir(final String cad) {
+        runOnUiThread(new Runnable() {
+            public void run() {
+                TextView ll = (TextView) findViewById(R.id.TextViewEstado);
+                ll.append(cad);
+                ScrollView ll1 = (ScrollView) findViewById(R.id.ScrollViewEstado);
+                ll1.fullScroll(View.FOCUS_DOWN);
+            }});
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,14 +31,28 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+
+
+
+        // Ejemplo de empleo funcion nuevamuestra crear un hilo que invoque a nuevamuestra para representar
+
+        new Thread(new Runnable() {
+            public void run() {int x=0;
+               imprimir("Hilo de dibujo Arrancado");
+                while(true){
+                    imprimir("Hola Mundo");
+                    try {
+                        Thread.sleep(200);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                    x++;
+                }
             }
-        });
+        }).start();
+
+
+
     }
 
     @Override

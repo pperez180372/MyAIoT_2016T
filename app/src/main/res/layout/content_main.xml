@@ -12,8 +12,114 @@
     tools:context="org.muiinf.pperez.myaiot_2016t.MainActivity"
     tools:showIn="@layout/activity_main">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:padding="@dimen/rellenodi"
+        android:background="@drawable/border"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <TextView android:layout_width="wrap_content"             android:layout_height="wrap_content"
+                android:text="@string/Titulo_Nombre_Servidor"        android:id="@+id/textView3" />
+            <TextView  android:layout_width="wrap_content"             android:layout_height="wrap_content" android:text="  "               android:id="@+id/textView7" />
+            <TextView android:layout_width="wrap_content"                  android:layout_height="wrap_content"                    android:text="1122334455" android:id="@+id/textView18" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <TextView android:layout_width="wrap_content"             android:layout_height="wrap_content"
+                android:text="@string/Titulo_Nombre_Variable"        android:id="@+id/textView3" />
+            <TextView  android:layout_width="wrap_content"             android:layout_height="wrap_content" android:text="  "               android:id="@+id/textView7" />
+            <TextView android:layout_width="wrap_content"                  android:layout_height="wrap_content"                    android:text="1122334455" android:id="@+id/textView18" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <TextView android:layout_width="wrap_content"             android:layout_height="wrap_content"
+                android:text="@string/Titulo_Nombre_Dispositivo"        android:id="@+id/textView3" />
+            <TextView  android:layout_width="wrap_content"             android:layout_height="wrap_content" android:text="  "               android:id="@+id/textView7" />
+            <TextView android:layout_width="wrap_content"                  android:layout_height="wrap_content"                    android:text="1122334455" android:id="@+id/textView18" />
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:padding="@dimen/rellenodi"
+        android:background="@drawable/border"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="175dp">
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:id="@+id/Grafica">
+        </FrameLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:padding="@dimen/rellenodi"
+        android:background="@drawable/border"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="LED1"
+            android:id="@+id/buttonled1" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="LED2"
+            android:id="@+id/buttonled2" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="LED3"
+            android:id="@+id/buttonled3" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="LED4"
+            android:id="@+id/buttonled4" />
+    </LinearLayout>
+        <LinearLayout android:padding="@dimen/rellenodi"
+            android:background="@drawable/border"
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="150dp">
+            <LinearLayout android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+                <TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="log"
+                    android:id="@+id/textView554" />
+                <ScrollView android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/ScrollViewEstado"
+                    android:layout_gravity="center_horizontal" >
+                    <TextView android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:text=""  android:id="@+id/TextViewEstado"/>
+                </ScrollView>
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
 </RelativeLayout>

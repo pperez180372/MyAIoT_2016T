@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">MyAIoT_2016T</string>
     <string name="action_settings">Settings</string>
+    <string name="Titulo_Nombre_Servidor">Server Name</string>
+    <string name="Titulo_Nombre_Dispositivo">Device Name</string>
+    <string name="Titulo_Nombre_Variable">Variable Name</string>
 </resources>
